@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { Box, Typography } from '@mui/material'
+import { Card, Typography } from '@mui/material'
 
 import { GET_LOCATIONS } from 'src/ui/views/Chat/common/apollo/queries'
 
@@ -16,9 +16,9 @@ const Body: React.FC = () => {
   })
 
   return (
-    <Box className={classes.body}>
+    <Card elevation={6} className={classes.body}>
       <Typography variant='h1'>Welcome to Chat</Typography>
-    </Box>
+    </Card>
   )
 }
 
