@@ -6,7 +6,7 @@ import classes from './Header.module.scss'
 const Header: React.FC = () => {
   return (
     <Box className={classes.wrapper}>
-      <Typography variant="h1">CHAT APP</Typography>
+      <Typography variant="h1" color="#FFFFFF">CHAT APP</Typography>
     </Box>
   )
 }

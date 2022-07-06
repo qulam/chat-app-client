@@ -35,6 +35,7 @@ export const defaultTheme = createTheme({
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightBold: 'bold',
+    fontFamily: 'Open Sans',
     h1: {
       fontSize: 22,
       fontWeight: 'bold',

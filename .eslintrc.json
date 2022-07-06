@@ -61,7 +61,10 @@
             "^react",
             "^@?\\w"
           ],
-          // Internal packages.
+          // MUI Icons.
+          [
+            "@mui/icons-material"
+          ],
           [
             "^(@|src)(/.*|$)"
           ],
