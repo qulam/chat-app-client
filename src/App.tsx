@@ -1,19 +1,17 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
-import { CssBaseline, ThemeProvider } from '@mui/material'
 import { RecoilRoot } from 'recoil'
 
 import { client } from 'src/common/config/apollo'
-import defaultTheme from 'src/common/config/theme/defaultTheme'
+import { ThemeProvider } from 'src/ui/components'
 import Views from 'src/ui/views'
 
 const App = () => {
   return (
     <RecoilRoot>
       <ApolloProvider client={client}>
-        <CssBaseline />
-        <ThemeProvider theme={defaultTheme}>
+        <ThemeProvider>
           <Router>
             <Views />
           </Router>
