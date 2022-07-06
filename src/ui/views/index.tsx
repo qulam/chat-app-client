@@ -2,15 +2,18 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import browserRoutes from 'src/common/browserRoutes'
+import { Layout } from 'src/ui/components'
 
-import Users from './Users'
+import Chat from './Chat'
 
 const Views: React.FC = () => {
   return (
-    <Routes>
-      <Route path={browserRoutes.HOME()} element={<Users />} />
-      <Route path={browserRoutes.USERS()} element={<Users />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path={browserRoutes.HOME()} element={<Chat />} />
+        <Route path={browserRoutes.CHAT()} element={<Chat />} />
+      </Routes>
+    </Layout>
   )
 }
 

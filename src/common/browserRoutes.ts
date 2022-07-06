@@ -1,4 +1,4 @@
 export default {
   HOME: () => '/',
-  USERS: () => '/users',
+  CHAT: () => '/chat',
 }

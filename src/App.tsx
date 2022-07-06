@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/client'
-import { ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import { RecoilRoot } from 'recoil'
 
 import { client } from 'src/common/config/apollo'
@@ -12,6 +12,7 @@ const App = () => {
   return (
     <RecoilRoot>
       <ApolloProvider client={client}>
+        <CssBaseline />
         <ThemeProvider theme={defaultTheme}>
           <Router>
             <Views />
