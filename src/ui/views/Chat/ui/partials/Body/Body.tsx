@@ -2,7 +2,7 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import { Box, Typography } from '@mui/material'
 
-import { GET_LOCATIONS } from 'src/ui/views/Users/common/apollo/queries'
+import { GET_LOCATIONS } from 'src/ui/views/Chat/common/apollo/queries'
 
 import classes from './Body.module.scss'
 
@@ -17,7 +17,7 @@ const Body: React.FC = () => {
 
   return (
     <Box className={classes.body}>
-      <Typography variant='h1'>Users Page</Typography>
+      <Typography variant='h1'>Welcome to Chat</Typography>
     </Box>
   )
 }
