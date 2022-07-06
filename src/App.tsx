@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { ApolloProvider } from '@apollo/client'
+import { ThemeProvider } from '@mui/material'
+import { RecoilRoot } from 'recoil'
 
-function App() {
+import { client } from 'src/common/config/apollo'
+import defaultTheme from 'src/common/config/theme/defaultTheme'
+import Views from 'src/ui/views'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <RecoilRoot>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={defaultTheme}>
+          <Router>
+            <Views />
+          </Router>
+        </ThemeProvider>
+      </ApolloProvider>
+    </RecoilRoot>
+  )
 }
 
-export default App;
+export default App
